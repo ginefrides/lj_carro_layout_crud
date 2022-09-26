@@ -1,0 +1,65 @@
+<h1>Edit Car {{car.nome}}</h1>
+
+<div class="back_view">
+  <form action="/cars/edit" method="post" class="row m-3">
+
+    <div class="row align-items-start">
+      <input type="hidden" name="id" value="{{car.id}}" />
+      <div class="col-md-6">
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" name="nome" value="{{car.nome}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="modelo" class="form-label">Modelo:</label>
+        <input type="text" name="modelo" value="{{car.modelo}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="motor" class="form-label">Motor:</label>
+        <input type="text" name="motor" value="{{car.motor}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="ano" class="form-label">Ano:</label>
+        <input type="text" name="ano" value="{{car.ano}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="fab" class="form-label">Fab:</label>
+        <input type="text" name="fab" value="{{car.fab}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="vlr" class="form-label">Vlr:</label>
+        <input type="text" name="vlr" value="{{car.vlr}}" class="form-control" />
+      </div>
+    </div>
+    
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="cor" class="form-label">Cor:</label>
+        <input type="text" name="cor" value="{{car.cor}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="opc" class="form-label">Opc:</label>
+        <input type="text" name="opc" value="{{car.opc}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <input type="submit" value="Atualizar" />
+    </div>

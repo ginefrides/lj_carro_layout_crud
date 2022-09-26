@@ -1,0 +1,52 @@
+<h1>Todos os Carros</h1>
+
+
+<ul class="cars_list list-group">
+  {{#each cars}}
+
+    <li class="list-group-item">
+      <div class="col-md-1">
+        <label for="">{{this.nome}}</label>
+      </div>
+      <div class="col-md-1">
+        <label for="">{{this.modelo}}</label>
+      </div>
+      <div class="col-md-1">
+        <label for="">{{this.motor}}</label>
+      </div>
+      <div class="col-md-1">
+        <label for="">{{this.ano}}</label>
+      </div>
+      <div class="col-md-1">
+        <label for="">{{this.fab}}</label>
+      </div>
+      <div class="col-md-1">
+        <label for="">{{this.vlr}}</label>
+      </div>
+      <div class="col-md-1">
+        <label for="">{{this.cor}}</label>
+      </div>
+      <div class="col-md-1">
+        <label for="">{{this.opc}}</label>
+      </div>
+
+
+      <div class="col-md-4 actions">
+        <a href="/cars/edit/{{this.id}}">
+          {{> edit_car}}
+        </a>
+        <form action="/cars/remove" method="post">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button type="submit">
+            {{> del_car}}
+          </button>
+        </form>
+      </div>
+    </li>
+
+  {{/each}}
+</ul>
+
+
+
+</div>
