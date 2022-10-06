@@ -23,6 +23,11 @@ app.use(
 )
 app.use(express.json())
 
+
+app.get('/', (req, res)=>{
+  res.render('home')
+})
+
 //adicionando CSS
 app.use(express.static('public'))
 
