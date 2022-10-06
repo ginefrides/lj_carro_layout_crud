@@ -6,8 +6,6 @@ const Car = require('./routes/carRouter')
 const conn = require('./db/conn')
 const carModel = require('./model/Car')
 
-
-
 const hbs = exphbs.create({
   partialsDir: ["views/partials"]
 })
@@ -28,13 +26,8 @@ app.use(express.json())
 //adicionando CSS
 app.use(express.static('public'))
 
-
-
-
 //adicionando rota Car
 app.use('/cars', Car)
-
-
 
 conn
   .sync()
@@ -45,8 +38,3 @@ conn
   .catch((err) => {
     console.log(err)
   })
-
-
-// app.listen(3000, () => {
-//   console.log('Server Started')
-// })
